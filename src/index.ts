@@ -38,6 +38,7 @@ for await (const filename of videosJsonFilename) {
       vid: data.vid,
       vName: data.vName,
       vt: clip.vTime,
+      vDate: data.vDate,
     }))
   })
 

@@ -7,6 +7,7 @@ export interface PointFeatureProp {
   vid: string
   vName: string
   vt: number
+  vDate: string
 }
 
 export interface RawItemData {
