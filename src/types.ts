@@ -1,3 +1,5 @@
+import type { Feature, Point } from '@turf/turf'
+
 export interface PointFeatureProp {
   // 自动生成
   id: string
@@ -42,3 +44,12 @@ export interface RawData {
   vName: string
   vClips: RawItemData[]
 }
+
+export interface RouteItem {
+  label: string
+  value: string
+  dateRange: number[]
+  url: string
+}
+
+export type PointFeature = Feature<Point, PointFeatureProp>

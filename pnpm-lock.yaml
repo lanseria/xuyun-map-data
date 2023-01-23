@@ -4,6 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.34.1
   '@turf/turf': ^6.5.0
   '@types/node': ^18.11.18
+  chalk: ^5.2.0
   eslint: ^8.32.0
   nanoid: ^4.0.0
   tsx: ^3.12.2
@@ -16,6 +17,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.34.1_7uibuqfxkfaozanbtbziikiqje
   '@types/node': 18.11.18
+  chalk: 5.2.0
   eslint: 8.32.0
   tsx: 3.12.2
   typescript: 4.9.4
@@ -1586,6 +1588,11 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+    dev: true
+
+  /chalk/5.2.0:
+    resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
   /character-entities-legacy/1.1.4:

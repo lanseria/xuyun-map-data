@@ -1,10 +1,15 @@
 import path from 'node:path'
+import type { RouteItem } from './types'
 
 export const ROOT_DIR = path.resolve('.')
 
 export const POINTS_NAME = 'all-points'
 
 export const GEOJSON_EXT = '.geojson'
+
+export const JSON_EXT = '.json'
+export const RAW_NAME = 'raw'
+export const DATA_NAME = 'data'
 
 export const ROUTE_LIST = [
   {
@@ -43,4 +48,4 @@ export const ROUTE_LIST = [
     dateRange: [2108, 2112],
     url: 'https://space.bilibili.com/697166795/channel/collectiondetail?sid=946593',
   },
-]
+] satisfies RouteItem[]
