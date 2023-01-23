@@ -5,6 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "tsx ./src/index.ts",
+    "dev:lint": "tsx ./src/lint.ts",
+    "dev:init": "tsx ./src/init.ts",
     "lint": "eslint .",
     "fix": "eslint . --fix"
   },
