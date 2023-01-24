@@ -4,10 +4,12 @@ import type { RouteItem } from './types'
 export const ROOT_DIR = path.resolve('.')
 
 export const POINTS_NAME = 'all-points'
+export const VIDEOS_NAME = 'all-videos'
 
 export const GEOJSON_EXT = '.geojson'
-
 export const JSON_EXT = '.json'
+export const GPX_EXT = '.gpx'
+
 export const RAW_NAME = 'raw'
 export const DATA_NAME = 'data'
 

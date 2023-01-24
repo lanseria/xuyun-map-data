@@ -12,12 +12,15 @@
     "fix": "eslint . --fix"
   },
   "dependencies": {
+    "@mapbox/togeojson": "^0.16.0",
     "@turf/turf": "^6.5.0",
-    "nanoid": "^4.0.0"
+    "nanoid": "^4.0.0",
+    "xmldom": "^0.6.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.34.1",
     "@types/node": "^18.11.18",
+    "@types/xmldom": "^0.1.31",
     "chalk": "^5.2.0",
     "eslint": "^8.32.0",
     "tsx": "^3.12.2",
