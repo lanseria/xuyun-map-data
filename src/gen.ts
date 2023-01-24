@@ -2,11 +2,18 @@ import path from 'node:path'
 import fs from 'node:fs/promises'
 import * as turf from '@turf/turf'
 import { nanoid } from 'nanoid'
-import { DATA_NAME, GEOJSON_EXT, JSON_EXT, POINTS_NAME, RAW_NAME, ROUTE_LIST } from './constant'
+import { DATA_NAME, GEOJSON_EXT, JSON_EXT, LAST_ROUTE, POINTS_NAME, RAW_NAME, ROUTE_LIST } from './constant'
 import { getRouteDirname } from './utils'
 import type { PointFeature, RawData } from './types'
 
 export const genGeojson = async () => {
+  const lastestJson = await fs.readFile('./lastest.json', { encoding: 'utf-8' })
+  const lastestData: RawData = JSON.parse(lastestJson)
+  const lastestRoute = ROUTE_LIST.find(route => route.value === LAST_ROUTE)
+  if (!lastestRoute)
+    throw new Error('没有找到最新路线')
+  const dirname = getRouteDirname(lastestRoute)
+  await fs.writeFile(path.resolve(dirname, RAW_NAME, lastestData.vDate + JSON_EXT), lastestJson)
   for await (const route of ROUTE_LIST) {
     const dirname = getRouteDirname(route)
 

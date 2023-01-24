@@ -42,6 +42,8 @@ export interface RawData {
   vDate: string
   // 视频名称
   vName: string
+  // 视频路程km
+  vDistanceKm: number
   vClips: RawItemData[]
 }
 

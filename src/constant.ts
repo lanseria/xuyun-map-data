@@ -49,3 +49,5 @@ export const ROUTE_LIST = [
     url: 'https://space.bilibili.com/697166795/channel/collectiondetail?sid=946593',
   },
 ] satisfies RouteItem[]
+
+export const LAST_ROUTE = 'dongbei'

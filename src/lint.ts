@@ -22,6 +22,7 @@ const isCounterMatched = (route: RouteItem, count: number) => {
 const updateReadmeContent = (route: RouteItem, newNumber: number) => {
   const dirname = getRouteDirname(route)
   const re = new RegExp(`(.*)\\((\\d+)\\)\\]\\((${dirname})`)
+  // console.log(re)
   readmeContent = readmeContent.replace(re, `$1(${newNumber})]($3`)
 }
 
