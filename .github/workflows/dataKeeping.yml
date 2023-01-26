@@ -44,5 +44,3 @@ jobs:
         - uses: EndBug/add-and-commit@v9
         with:
           message: 'chore: data keeping [bot]'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
