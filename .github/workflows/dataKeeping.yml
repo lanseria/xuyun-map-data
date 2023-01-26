@@ -41,7 +41,8 @@ jobs:
         run: nr fix
 
       - name: Commit
-        uses: EndBug/add-and-commit@v4
+        - uses: EndBug/add-and-commit@v9
+        with:
         with:
           message: 'chore: data keeping [bot]'
         env:
