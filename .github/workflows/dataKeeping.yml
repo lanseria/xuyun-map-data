@@ -6,9 +6,9 @@ name: Data Keeping
 # events but only for the main branch
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -19,30 +19,30 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 18
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-    - name: Install Ni
-      run: npm i -g @antfu/ni && npm i -g pnpm
+      - name: Install Ni
+        run: npm i -g @antfu/ni && npm i -g pnpm
 
-    - name: Install Package
-      run: ni
+      - name: Install Package
+        run: ni
 
-    - name: Data Gen
-      run: nr dev:gen
+      - name: Data Gen
+        run: nr dev:gen
 
-    - name: Lint Md
-      run: nr dev:lint
+      - name: Lint Md
+        run: nr dev:lint
 
-    - name: ESLint Fix
-      run: nr fix
+      - name: ESLint Fix
+        run: nr fix
 
-    - name: Commit
-      uses: EndBug/add-and-commit@v4
-      with:
-        message: "chore: data keeping [bot]"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit
+        uses: EndBug/add-and-commit@v4
+        with:
+          message: 'chore: data keeping [bot]'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
