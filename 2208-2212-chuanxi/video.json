@@ -1,0 +1,42 @@
+{
+  "uid": "697166795",
+  "sid": "947506",
+  "name": "重返川西",
+  "desc": "2022年8月 疫情汹涌四处封控 只能千里转进川西",
+  "value": "chuanxi",
+  "date": "2208-2212",
+  "startEndPoints": [
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2022-08-13",
+        "name": "起点四川广元市火车站",
+        "type": "flag",
+        "icon": "start"
+      },
+      "geometry": {
+        "coordinates": [
+          105.81791457316751,
+          32.4527399416378
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2022-12-02",
+        "name": "终点四川甘孜藏族自治州白玉县",
+        "type": "flag",
+        "icon": "end"
+      },
+      "geometry": {
+        "coordinates": [
+          98.82262971750276,
+          31.211582115485726
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

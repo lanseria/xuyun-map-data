@@ -1,0 +1,42 @@
+{
+  "uid": "697166795",
+  "sid": "947480",
+  "name": "遥远边疆",
+  "desc": "完成阿里中线骑行后 我开始了独自前往新疆的旅程",
+  "value": "xinjiang",
+  "date": "2205-2208",
+  "startEndPoints": [
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2022-05-26",
+        "name": "起点西藏阿里噶尔县狮泉河镇噶尔县",
+        "type": "flag",
+        "icon": "start"
+      },
+      "geometry": {
+        "coordinates": [
+          80.09290512200153,
+          32.50039653921284
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2022-08-08",
+        "name": "终点新疆哈密市伊州区哈密站",
+        "type": "flag",
+        "icon": "end"
+      },
+      "geometry": {
+        "coordinates": [
+          93.50467154232598,
+          42.848558567056415
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

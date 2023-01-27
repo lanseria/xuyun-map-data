@@ -1,0 +1,42 @@
+{
+  "uid": "697166795",
+  "sid": "946593",
+  "name": "落魄江湖",
+  "desc": "2020年10月31号从老家出发开始骑行流浪中国 资金耗尽开始拍短视频 这一阶段因为ky评论和弹幕比较多 删除了部分视频",
+  "value": "first",
+  "date": "2108-2112",
+  "startEndPoints": [
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2021-08-29",
+        "name": "起点广西南宁市武鸣区大明山",
+        "type": "flag",
+        "icon": "start"
+      },
+      "geometry": {
+        "coordinates": [
+          108.33212394654788,
+          23.523818233427846
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2021-12-04",
+        "name": "终点四川乐山市",
+        "type": "flag",
+        "icon": "end"
+      },
+      "geometry": {
+        "coordinates": [
+          103.74771160518901,
+          29.585083410368696
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

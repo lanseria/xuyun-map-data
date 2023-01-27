@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import dayjs from 'dayjs'
 import chalk from 'chalk'
 import { ROOT_DIR, ROUTE_LIST } from './constant'
 import { getRouteDirname, getRouteGeoJSON } from './utils'
@@ -24,6 +25,10 @@ const updateReadmeContent = (route: RouteItem, newNumber: number) => {
   const re = new RegExp(`(.*)\\((\\d+)\\)\\]\\((${dirname})`)
   // console.log(re)
   readmeContent = readmeContent.replace(re, `$1(${newNumber})]($3`)
+
+  const reDate = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}/
+  const time = dayjs().format('YYYY/MM/DD HH:mm:ss')
+  readmeContent = readmeContent.replace(reDate, time)
 }
 
 export const lint = async () => {

@@ -1,0 +1,42 @@
+{
+  "uid": "697166795",
+  "sid": "",
+  "name": "东北之行",
+  "desc": "",
+  "value": "dongbei",
+  "date": "2212-2303",
+  "startEndPoints": [
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2022-12-09",
+        "name": "起点沈阳火车站",
+        "type": "flag",
+        "icon": "start"
+      },
+      "geometry": {
+        "coordinates": [
+          123.38729979430065,
+          41.7916073393109
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2023-03-31",
+        "name": "终点漠河市",
+        "type": "flag",
+        "icon": "end"
+      },
+      "geometry": {
+        "coordinates": [
+          122.53363948390631,
+          52.97241729503472
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

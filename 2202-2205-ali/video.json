@@ -1,0 +1,42 @@
+{
+  "uid": "697166795",
+  "sid": "946665",
+  "name": "阿里尘与雪",
+  "desc": "在拉萨等待了十五天 用骑行317拍视频赚的钱换了一套好一些的装备 我开始了骑行西藏阿里的旅程",
+  "value": "ali",
+  "date": "2202-2205",
+  "startEndPoints": [
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2022-02-17",
+        "name": "起点西藏拉萨市",
+        "type": "flag",
+        "icon": "start"
+      },
+      "geometry": {
+        "coordinates": [
+          91.17052326435578,
+          29.655465231345303
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "flag",
+        "icon": "end"
+      },
+      "geometry": {
+        "date": "2022-05-23",
+        "name": "终点新疆阿里地区革吉县",
+        "coordinates": [
+          81.1429759659627,
+          32.38911586113717
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

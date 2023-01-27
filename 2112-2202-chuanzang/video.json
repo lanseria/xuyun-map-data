@@ -1,0 +1,42 @@
+{
+  "uid": "697166795",
+  "sid": "946626",
+  "name": "风雪川藏北",
+  "desc": "由于经费不够，在西南地区拍了两个月视频后 终于靠视频收入凑到了三千多块钱 买了冬季睡袋和帐篷 开始骑行进藏 彼时经历了无数的质疑和嘲讽 劝阻与恶意诅咒",
+  "value": "chuanzang",
+  "date": "2112-2202",
+  "startEndPoints": [
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2021-12-08",
+        "name": "起点四川省成都市都江堰市",
+        "type": "flag",
+        "icon": "start"
+      },
+      "geometry": {
+        "coordinates": [
+          103.61430709122158,
+          30.996580309107543
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "date": "2022-02-14",
+        "name": "终点西藏拉萨市",
+        "type": "flag",
+        "icon": "end"
+      },
+      "geometry": {
+        "coordinates": [
+          91.17052326435578,
+          29.655465231345303
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

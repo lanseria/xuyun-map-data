@@ -1,5 +1,5 @@
 {
-  "name": "xuyun-travel-map",
+  "name": "xuyun-map-data",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -14,6 +14,7 @@
   "dependencies": {
     "@mapbox/togeojson": "^0.16.0",
     "@turf/turf": "^6.5.0",
+    "dayjs": "^1.11.7",
     "nanoid": "^4.0.0",
     "xmldom": "^0.6.0"
   },
