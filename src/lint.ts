@@ -2,9 +2,15 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import dayjs from 'dayjs'
 import chalk from 'chalk'
+import utc from 'dayjs/plugin/utc'
+import timezone from 'dayjs/plugin/timezone'
+
 import { ROOT_DIR, ROUTE_LIST } from './constant'
 import { getRouteDirname, getRouteGeoJSON } from './utils'
 import type { RouteItem } from './types'
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
 
 const readme = path.resolve(ROOT_DIR, 'README.md')
 let readmeContent = await fs.readFile(readme, 'utf8')
@@ -27,7 +33,7 @@ const updateReadmeContent = (route: RouteItem, newNumber: number) => {
   readmeContent = readmeContent.replace(re, `$1(${newNumber})]($3`)
 
   const reDate = /\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}/
-  const time = dayjs().format('YYYY/MM/DD HH:mm:ss')
+  const time = dayjs().tz('Asia/Shanghai').format('YYYY/MM/DD HH:mm:ss')
   readmeContent = readmeContent.replace(reDate, time)
 }
 

@@ -7,7 +7,7 @@ import { DOMParser } from 'xmldom'
 import type { Feature, FeatureCollection, LineString } from '@turf/turf'
 import { DATA_NAME, GEOJSON_EXT, GPX_EXT, JSON_EXT, LAST_ROUTE, POINTS_NAME, RAW_NAME, ROUTE_LIST, VIDEOS_NAME } from './constant'
 import { getRouteDirname } from './utils'
-import type { PointFeature, RawData, VideoData } from './types'
+import type { PointFeature, RawData, RouteVideoItem, RouteVideoJsonItem, VideoData } from './types'
 
 const gpxToGeojson = async (dataDirPath: string) => {
   const gpxDir = path.resolve(dataDirPath, 'gpx')
@@ -39,6 +39,12 @@ const videoLineGen = async (rootDirpath: string, videoItem: RawData, multiPoint:
   }
 }
 
+export const getRouteJsonData = async (dirname: string) => {
+  const routeVideoJsonPath = path.resolve(dirname, 'video.json')
+  const routeVideoJson = await fs.readFile(routeVideoJsonPath, { encoding: 'utf-8' })
+  return JSON.parse(routeVideoJson) satisfies RouteVideoItem
+}
+
 export const genGeojson = async () => {
   const lastestJson = await fs.readFile('./lastest.json', { encoding: 'utf-8' })
   const lastestData: RawData = JSON.parse(lastestJson)
@@ -47,12 +53,21 @@ export const genGeojson = async () => {
     throw new Error('没有找到最新路线')
   const dirname = getRouteDirname(lastestRoute)
   await fs.writeFile(path.resolve(dirname, RAW_NAME, lastestData.vDate + JSON_EXT), lastestJson)
+
+  const allRouteJson: RouteVideoJsonItem[] = []
   // 循环
   for await (const route of ROUTE_LIST) {
     const dirname = getRouteDirname(route)
 
     const RAW_ROOT_DIR = path.resolve(`./${dirname}/${RAW_NAME}`)
     const DATA_ROOT_DIR = path.resolve(`./${dirname}/${DATA_NAME}`)
+
+    const vJsonData = await getRouteJsonData(dirname)
+    // 填充 all route
+    allRouteJson.push({
+      ...route,
+      ...vJsonData,
+    })
     const videosFilename = await fs
       .readdir(RAW_ROOT_DIR)
     // 如何 Raw 为空，则跳过
@@ -113,6 +128,9 @@ export const genGeojson = async () => {
     const writeVideoData = JSON.stringify(allVideoList)
     await fs.writeFile(path.resolve(DATA_ROOT_DIR, `${VIDEOS_NAME}${JSON_EXT}`), writeVideoData)
   }
+
+  // gen all route video point json data
+  await fs.writeFile('routes.json', JSON.stringify(allRouteJson))
 }
 
 genGeojson()

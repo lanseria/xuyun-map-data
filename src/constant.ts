@@ -15,7 +15,7 @@ export const DATA_NAME = 'data'
 
 export const ROUTE_LIST = [
   {
-    label: '东北',
+    label: '东北之行',
     value: 'dongbei',
     dateRange: [2212, 2303],
     url: '',
