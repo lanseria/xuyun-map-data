@@ -67,6 +67,7 @@ export const genGeojson = async () => {
     allRouteJson.push({
       ...route,
       ...vJsonData,
+      value: `${vJsonData.date}-${route.label}`,
     })
     const videosFilename = await fs
       .readdir(RAW_ROOT_DIR)
