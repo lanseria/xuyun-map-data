@@ -15,41 +15,48 @@ export const DATA_NAME = 'data'
 
 export const ROUTE_LIST = [
   {
-    label: '东北之行',
+    name: '东北之行',
     value: 'dongbei',
     dateRange: [2212, 2303],
     url: '',
   },
   {
-    label: '重返川西',
+    name: '重返川西',
     value: 'chuanxi',
     dateRange: [2208, 2212],
-    url: 'https://space.bilibili.com/697166795/channel/collectiondetail?sid=947506',
+    url: '',
   },
   {
-    label: '遥远边疆',
+    name: '遥远边疆',
     value: 'xinjiang',
     dateRange: [2205, 2208],
-    url: 'https://space.bilibili.com/697166795/channel/collectiondetail?sid=947480',
+    url: '',
   },
   {
-    label: '阿里尘与雪',
+    name: '阿里尘与雪',
     value: 'ali',
     dateRange: [2202, 2205],
-    url: 'https://space.bilibili.com/697166795/channel/collectiondetail?sid=946665',
+    url: '',
   },
   {
-    label: '风雪川藏北',
+    name: '风雪川藏北',
     value: 'chuanzang',
     dateRange: [2112, 2202],
-    url: 'https://space.bilibili.com/697166795/channel/collectiondetail?sid=946626',
+    url: '',
   },
   {
-    label: '落魄江湖',
+    name: '落魄江湖',
     value: 'first',
     dateRange: [2108, 2112],
-    url: 'https://space.bilibili.com/697166795/channel/collectiondetail?sid=946593',
+    url: '',
   },
 ] satisfies RouteItem[]
 
-export const LAST_ROUTE = 'dongbei'
+export const FORMAT_ROUTE_LIST = ROUTE_LIST.map((item) => {
+  return {
+    ...item,
+    value: `${item.dateRange.join('-')}-${item.value}`,
+  }
+})
+
+export const LAST_ROUTE = '2212-2303-dongbei'
