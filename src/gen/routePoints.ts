@@ -15,6 +15,7 @@ export const genRoutePoints = async (routeItem: RouteVideoItem, date: string): P
   const pointList: PointFeature[] = []
   data.vClips.forEach((clip) => {
     pointList.push(turf.point(clip.coordinates, {
+      rValue: routeItem.value,
       id: nanoid(),
       name: clip.name,
       date: clip.date,

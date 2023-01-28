@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import { DOMParser } from 'xmldom'
 import tj from '@mapbox/togeojson'
+import { nanoid } from 'nanoid'
 import type { LineFeature, LineFeatureProp, RouteVideoItem, VideoData } from '../types'
 import { getValueDataGpxValueGeojson, getValueDataGpxValueGpx } from '../utils'
 
@@ -25,6 +26,7 @@ export const genGeojsonByGpx = async (routeItem: RouteVideoItem, videoData: Vide
   const colorArray = ['#be185d', '#be123c', '#b91c1c', '#c2410c', '#b45309', '#b45309', '#4d7c0f', '#047857', '#0f766e', '#0e7490', '#0369a1', '#1d4ed8', '#4338ca', '#6d28d9', '#6d28d9', '#a21caf']
 
   return genGeojsonFromGpx(videoData.vDate, {
+    id: nanoid(),
     type: 'finish',
     color: colorArray[0],
     rValue: routeItem.value,
@@ -37,6 +39,7 @@ export const genGeojsonByGpx = async (routeItem: RouteVideoItem, videoData: Vide
 
 export const genRestGeojsonByGpx = async (routeItem: RouteVideoItem): Promise<LineFeature | undefined> => {
   return genGeojsonFromGpx('rest', {
+    id: nanoid(),
     rValue: routeItem.value,
     type: 'rest',
     color: 'gray',

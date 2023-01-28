@@ -1,6 +1,8 @@
 import type { Feature, LineString, Point } from '@turf/turf'
 
 export interface PointFeatureProp {
+  // 路线value值
+  rValue: string
   // 自动生成
   id: string
   // 切片点描述
@@ -24,6 +26,8 @@ export interface PointFeatureProp {
 }
 
 export interface LineFeatureProp {
+  // 自动生成
+  id: string
   // 类型
   type: 'finish' | 'rest'
   // 颜色
