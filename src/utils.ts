@@ -18,7 +18,7 @@ export const getValueVideoJson = (value: string) =>
   path.resolve(value, `video${JSON_EXT}`)
 
 export const getValueRawDir = (value: string) => {
-  return path.resolve(value)
+  return path.resolve(value, RAW_NAME)
 }
 
 export const getValueDataGpxValueGpx = (value: string, dataValueFile: string) => {

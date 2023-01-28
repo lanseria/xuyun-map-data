@@ -11,8 +11,10 @@ import { genRoutePoints } from './routePoints'
  */
 export const genRouteList = async (routeItem: RouteVideoItem): Promise<[Array<LineFeature | PointFeature | StartEndPointFeature>, VideoData[]]> => {
   const dirPath = getValueRawDir(routeItem.value)
+  // console.log('dirPath: ', dirPath)
   const videosFilename = await fs
     .readdir(dirPath)
+  // console.log('videosFilename: ', videosFilename)
   const videoFeatureList: Array<LineFeature | PointFeature | StartEndPointFeature> = []
   const videoDataList: VideoData[] = []
   //
@@ -22,13 +24,13 @@ export const genRouteList = async (routeItem: RouteVideoItem): Promise<[Array<Li
   for await (const date of filterVideoDates) {
     const [videoPointList, videoData] = await genRoutePoints(routeItem, date)
     const videoLine = await genGeojsonByGpx(routeItem, videoData)
-    videoFeatureList.push(videoLine)
+    videoLine && videoFeatureList.push(videoLine)
     videoFeatureList.push(...videoPointList)
     videoDataList.push(videoData)
   }
 
   const routeRestLine = await genRestGeojsonByGpx(routeItem)
-  videoFeatureList.push(routeRestLine)
+  routeRestLine && videoFeatureList.push(routeRestLine)
 
   return [videoFeatureList, videoDataList]
 }
