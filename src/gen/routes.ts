@@ -11,7 +11,7 @@ import { genRouteList } from './routeList'
 export const genRoutes = async (routeItem: RouteItem): Promise<RouteVideoItem> => {
   // 拿到每个routeItem的视频 video.json 进行解析
   const filePath = getValueVideoJson(routeItem.value)
-  console.log('genRoutes filePath: ', filePath)
+  // console.log('genRoutes filePath: ', filePath)
   const routeItemVideoJson = await fs.readFile(filePath, { encoding: 'utf-8' })
   const routeItemVideoData: RouteVideoItem = {
     ...JSON.parse(routeItemVideoJson),

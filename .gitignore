@@ -2,3 +2,4 @@ node_modules
 **/data/**/*.json
 **/data/**/*.geojson
 **/data/all-points.geojson
+routes.json
