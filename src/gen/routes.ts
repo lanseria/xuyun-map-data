@@ -20,6 +20,7 @@ export const genRoutes = async (routeItem: RouteItem): Promise<RouteVideoItem> =
   //  解析出所有线路与兴趣点，视频列表
   const [featureList, videoList] = await genRouteList(routeItemVideoData)
 
+  featureList.push(...routeItemVideoData.startEndPoints)
   routeItemVideoData.featureList = featureList
   routeItemVideoData.videoList = videoList
 
