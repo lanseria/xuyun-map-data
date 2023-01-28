@@ -10,8 +10,8 @@ const genGeojsonFromGpx = async (date: string, lineProp: LineFeatureProp): Promi
     const data = await fs.readFile(gpxFilepath, 'utf-8')
     const gpx = new DOMParser().parseFromString(data)
 
-    const convertedWithStyles = tj.gpx(gpx)
-    convertedWithStyles.features[0].properties = lineProp
+    const convertedWithStyles: LineFeature = tj.gpx(gpx).features[0]
+    convertedWithStyles.properties = lineProp
     const saveGeojsonPath = getValueDataGpxValueGeojson(lineProp.rValue, date)
     await fs.writeFile(saveGeojsonPath, JSON.stringify(convertedWithStyles))
     return convertedWithStyles
