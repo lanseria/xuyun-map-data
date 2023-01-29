@@ -7,36 +7,20 @@
   "date": "2108-2112",
   "startEndPoints": [
     {
-      "type": "Feature",
-      "properties": {
-        "date": "2021-08-29",
-        "name": "起点广西南宁市武鸣区大明山",
-        "type": "flag",
-        "icon": "start"
-      },
-      "geometry": {
-        "coordinates": [
-          108.33212394654788,
-          23.523818233427846
-        ],
-        "type": "Point"
-      }
+      "date": "2021-08-29",
+      "name": "起点广西南宁市武鸣区大明山",
+      "coordinates": [
+        108.33212394654788,
+        23.523818233427846
+      ]
     },
     {
-      "type": "Feature",
-      "properties": {
-        "date": "2021-12-04",
-        "name": "终点四川乐山市",
-        "type": "flag",
-        "icon": "end"
-      },
-      "geometry": {
-        "coordinates": [
-          103.74771160518901,
-          29.585083410368696
-        ],
-        "type": "Point"
-      }
+      "date": "2021-12-04",
+      "name": "终点四川乐山市",
+      "coordinates": [
+        103.74771160518901,
+        29.585083410368696
+      ]
     }
   ]
 }

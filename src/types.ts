@@ -25,15 +25,23 @@ export interface PointFeatureProp {
   vDate: string
 }
 
+export interface StartEndPointFeatureProp {
+  rValue: string
+  date: string
+  name: string
+  type: 'flag'
+  icon: 'start' | 'end'
+}
+
 export interface LineFeatureProp {
+  // 路线value值
+  rValue: string
   // 自动生成
   id: string
   // 类型
   type: 'finish' | 'rest'
   // 颜色
   color: string
-  // 路线value值
-  rValue: string
   // 视频ID
   vid: string
   // 视频发布时间
@@ -81,18 +89,18 @@ export interface VideoData {
   vDistanceKm: number
 }
 
-export type StartEndPointFeature = Feature<Point, {
-  'date': string
-  'name': string
-  'type': string
-  'icon': string
-}>
-
 export interface RouteItem {
   name: string
   value: string
   dateRange: number[]
   url: string
+}
+// "type": "flag",
+// "icon": "start" | "end"
+export interface StartEndPoint {
+  date: string
+  name: string
+  coordinates: [number, number]
 }
 
 export interface RouteVideoItem {
@@ -103,12 +111,14 @@ export interface RouteVideoItem {
   // 2203-2305-dongbei
   value: string
   date: string
-  startEndPoints: StartEndPointFeature[]
+  startEndPoints: StartEndPoint[]
   // gpx
   featureList: Array<LineFeature | PointFeature | StartEndPointFeature>
   videoList: VideoData[]
 }
 
 export type PointFeature = Feature<Point, PointFeatureProp>
+
+export type StartEndPointFeature = Feature<Point, StartEndPointFeatureProp>
 
 export type LineFeature = Feature<LineString, LineFeatureProp>

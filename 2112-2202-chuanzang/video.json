@@ -7,36 +7,20 @@
   "date": "2112-2202",
   "startEndPoints": [
     {
-      "type": "Feature",
-      "properties": {
-        "date": "2021-12-08",
-        "name": "起点四川省成都市都江堰市",
-        "type": "flag",
-        "icon": "start"
-      },
-      "geometry": {
-        "coordinates": [
-          103.61430709122158,
-          30.996580309107543
-        ],
-        "type": "Point"
-      }
+      "date": "2021-12-08",
+      "name": "起点四川省成都市都江堰市",
+      "coordinates": [
+        103.61430709122158,
+        30.996580309107543
+      ]
     },
     {
-      "type": "Feature",
-      "properties": {
-        "date": "2022-02-14",
-        "name": "终点西藏拉萨市",
-        "type": "flag",
-        "icon": "end"
-      },
-      "geometry": {
-        "coordinates": [
-          91.17052326435578,
-          29.655465231345303
-        ],
-        "type": "Point"
-      }
+      "date": "2022-02-14",
+      "name": "终点西藏拉萨市",
+      "coordinates": [
+        91.17052326435578,
+        29.655465231345303
+      ]
     }
   ]
 }

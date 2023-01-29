@@ -7,36 +7,20 @@
   "date": "2208-2212",
   "startEndPoints": [
     {
-      "type": "Feature",
-      "properties": {
-        "date": "2022-08-13",
-        "name": "起点四川广元市火车站",
-        "type": "flag",
-        "icon": "start"
-      },
-      "geometry": {
-        "coordinates": [
-          105.81791457316751,
-          32.4527399416378
-        ],
-        "type": "Point"
-      }
+      "date": "2022-08-13",
+      "name": "起点四川广元市火车站",
+      "coordinates": [
+        105.81791457316751,
+        32.4527399416378
+      ]
     },
     {
-      "type": "Feature",
-      "properties": {
-        "date": "2022-12-02",
-        "name": "终点四川甘孜藏族自治州白玉县",
-        "type": "flag",
-        "icon": "end"
-      },
-      "geometry": {
-        "coordinates": [
-          98.82262971750276,
-          31.211582115485726
-        ],
-        "type": "Point"
-      }
+      "date": "2022-12-02",
+      "name": "终点四川甘孜藏族自治州白玉县",
+      "coordinates": [
+        98.82262971750276,
+        31.211582115485726
+      ]
     }
   ]
 }

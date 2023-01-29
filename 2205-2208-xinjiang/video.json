@@ -7,36 +7,20 @@
   "date": "2205-2208",
   "startEndPoints": [
     {
-      "type": "Feature",
-      "properties": {
-        "date": "2022-05-26",
-        "name": "起点西藏阿里狮泉河噶尔县",
-        "type": "flag",
-        "icon": "start"
-      },
-      "geometry": {
-        "coordinates": [
-          80.09290512200153,
-          32.50039653921284
-        ],
-        "type": "Point"
-      }
+      "date": "2022-05-26",
+      "name": "起点西藏阿里狮泉河噶尔县",
+      "coordinates": [
+        80.09290512200153,
+        32.50039653921284
+      ]
     },
     {
-      "type": "Feature",
-      "properties": {
-        "date": "2022-08-08",
-        "name": "终点新疆轮台县",
-        "type": "flag",
-        "icon": "end"
-      },
-      "geometry": {
-        "coordinates": [
-          84.2496611323748,
-          41.77561262838577
-        ],
-        "type": "Point"
-      }
+      "date": "2022-08-08",
+      "name": "终点新疆轮台县",
+      "coordinates": [
+        84.2496611323748,
+        41.77561262838577
+      ]
     }
   ]
 }

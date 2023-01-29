@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises'
-import type { RouteItem, RouteVideoItem } from '../types'
+import * as turf from '@turf/turf'
+import type { RouteItem, RouteVideoItem, StartEndPointFeature, StartEndPointFeatureProp } from '../types'
 import { getValueVideoJson } from '../utils'
 import { genRouteList } from './routeList'
 
@@ -19,8 +20,17 @@ export const genRoutes = async (routeItem: RouteItem): Promise<RouteVideoItem> =
   }
   //  解析出所有线路与兴趣点，视频列表
   const [featureList, videoList] = await genRouteList(routeItemVideoData)
-
-  featureList.push(...routeItemVideoData.startEndPoints)
+  routeItemVideoData.startEndPoints.forEach((item, idx) => {
+    const icons = ['start', 'end']
+    const pointFeature: StartEndPointFeature = turf.point(item.coordinates, {
+      rValue: routeItem.value,
+      type: 'flag',
+      icon: icons[idx],
+      name: item.name,
+      date: item.date,
+    } as StartEndPointFeatureProp)
+    featureList.push(pointFeature)
+  })
   routeItemVideoData.featureList = featureList
   routeItemVideoData.videoList = videoList
 

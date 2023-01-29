@@ -7,36 +7,20 @@
   "date": "2202-2205",
   "startEndPoints": [
     {
-      "type": "Feature",
-      "properties": {
-        "date": "2022-02-17",
-        "name": "起点西藏拉萨市",
-        "type": "flag",
-        "icon": "start"
-      },
-      "geometry": {
-        "coordinates": [
-          91.17052326435578,
-          29.655465231345303
-        ],
-        "type": "Point"
-      }
+      "date": "2022-02-17",
+      "name": "起点西藏拉萨市",
+      "coordinates": [
+        91.17052326435578,
+        29.655465231345303
+      ]
     },
     {
-      "type": "Feature",
-      "properties": {
-        "type": "flag",
-        "icon": "end"
-      },
-      "geometry": {
-        "date": "2022-05-23",
-        "name": "终点新疆阿里地区革吉县",
-        "coordinates": [
-          81.1429759659627,
-          32.38911586113717
-        ],
-        "type": "Point"
-      }
+      "date": "2022-05-23",
+      "name": "终点新疆阿里地区革吉县",
+      "coordinates": [
+        81.1429759659627,
+        32.38911586113717
+      ]
     }
   ]
 }
