@@ -122,3 +122,5 @@ export type PointFeature = Feature<Point, PointFeatureProp>
 export type StartEndPointFeature = Feature<Point, StartEndPointFeatureProp>
 
 export type LineFeature = Feature<LineString, LineFeatureProp>
+
+export type AllFeature = PointFeature | StartEndPointFeature | LineFeature
