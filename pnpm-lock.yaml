@@ -4,7 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.34.2
   '@mapbox/togeojson': ^0.16.0
   '@turf/turf': ^6.5.0
-  '@types/node': ^18.11.19
+  '@types/node': ^18.13.0
   '@types/xmldom': ^0.1.31
   chalk: ^5.2.0
   dayjs: ^1.11.7
@@ -23,7 +23,7 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config': 0.34.2_4vsywjlpuriuw3tl5oq6zy5a64
-  '@types/node': 18.11.19
+  '@types/node': 18.13.0
   '@types/xmldom': 0.1.31
   chalk: 5.2.0
   eslint: 8.33.0
@@ -1310,8 +1310,8 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
-  /@types/node/18.11.19:
-    resolution: {integrity: sha512-YUgMWAQBWLObABqrvx8qKO1enAvBUdjZOAWQ5grBAkp5LQv45jBvYKZ3oFS9iKRCQyFjqw6iuEa1vmFqtxYLZw==}
+  /@types/node/18.13.0:
+    resolution: {integrity: sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg==}
     dev: true
 
   /@types/normalize-package-data/2.4.1:
